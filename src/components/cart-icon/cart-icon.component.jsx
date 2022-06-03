@@ -11,11 +11,7 @@ const CartIcon = () => {
   const cartCount = useSelector(selectCartCount);
   const dispatch = useDispatch();
 
-  const toggleDropdown = () => {
-    const dispatchValue = setCartIsOpen(!isCartOpen);
-    console.log(dispatchValue);
-    dispatch(dispatchValue);
-  };
+  const toggleDropdown = () => dispatch(setCartIsOpen(!isCartOpen));
 
   return (
     <CartIconContainer onClick={toggleDropdown}>
