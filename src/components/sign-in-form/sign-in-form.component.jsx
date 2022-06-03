@@ -30,7 +30,8 @@ const SignIn = () => {
   const handleSubmit = async ev => {
     ev.preventDefault();
 
-    const { user } = await signInAuthUserWithEmailAndPassword(email, password);
+    await signInAuthUserWithEmailAndPassword(email, password);
+
     try {
     } catch (error) {
       console.log(error.message);
